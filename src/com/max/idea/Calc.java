@@ -9,15 +9,15 @@ public class Calc {
         System.out.print("Введите число 2: ");
         int y = in.nextInt();
         System.out.print("Введите операцию: ");
-        String a = sc.nextLine();
+        String operation = sc.nextLine();
+
     }
-    public static int calc(int x, int y, char a) {
-        int result = calc(x,y,a);
-        switch (a) {
-            case '+':
-                result = x + y;
-                break;
+    public static int calc(int x, int y, String operation) {
+        switch (operation) {
+            case "+":
+                return x + y;
         }
-        return result;
     }
 }
+
+
