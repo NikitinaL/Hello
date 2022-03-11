@@ -5,17 +5,25 @@ public class Calc {
         Scanner in = new Scanner(System.in);
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите число 1: ");
-        int x = in.nextInt();
+        int arg1 = in.nextInt();
         System.out.print("Введите число 2: ");
-        int y = in.nextInt();
+        int arg2 = in.nextInt();
         System.out.print("Введите операцию: ");
         String operation = sc.nextLine();
-
+        System.out.println(calculate(arg1, arg2, operation));
     }
-    public static int calc(int x, int y, String operation) {
+    public static int calculate(int arg1, int arg2, String operation) {
         switch (operation) {
             case "+":
-                return x + y;
+                return arg1 + arg2;
+            case "-":
+                return arg1 - arg2;
+            case "*":
+                return arg1 * arg2;
+            case "/":
+                return arg1 / arg2;
+            default:
+                throw new UnsupportedOperationException("Не корректная операция, Введите +,-,/,*");
         }
     }
 }
